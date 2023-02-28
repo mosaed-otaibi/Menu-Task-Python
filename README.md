@@ -27,11 +27,11 @@ it will print "User add" and so on
 
 NOTE : 
 
-1: Fork this project
-2: upload the project locally 
-3: create .py file and write your code
-4: push project 
-5: pull request 
-6: new pull request 
+- 1: Fork this project
+- 2: upload the project locally 
+- 3: create .py file and write your code
+- 4: push project 
+- 5: pull request 
+- 6: new pull request 
 (title pull request : your name )
 
