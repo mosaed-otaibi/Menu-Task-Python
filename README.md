@@ -3,6 +3,8 @@
 In this Task:
 
 <ul>
+  
+  
 ## Create multiple functions to give the user the ability to choose a specific command to run  
 
 ### Functions for each command
@@ -14,12 +16,12 @@ In this Task:
 
 </ul> 
 
-#### You can create with at least one flow-mechanisim 
+#### You can create the project with at least one flow-mechanisim for (e.g loop, while ..etc)
 
 #### The Expected Output :
 task 1: 
-if user choose 1 
-print("User add") and so on
+e.g if user choose 1 :
+it will print "User add" and so on
 
 ### In the next leture you will learn how to use systems commands 
 
