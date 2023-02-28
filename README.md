@@ -1,9 +1,9 @@
-#Python Menu Task 
+# Python Menu Task 
 ------------------
 In this Task:
 
 <ul>
-##Create multiple functions to give the user the ability to choose a specific command to run  
+## Create multiple functions to give the user the ability to choose a specific command to run  
 
 ### Functions for each command
 <li>Add User</li>
