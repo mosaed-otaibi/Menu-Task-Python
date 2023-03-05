@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import subprocess
 
@@ -10,7 +12,7 @@ def add_user():
         username = input("Enter the name of the user: ")
         print("Do you want to add the user '" + username + "'? (Y/N)", end="")
         confirm = input().upper()
-    os.system("sudo adduser " + username)
+    subprocess.run(["sudo", "adduser", username])
 
 
 def remove_user():
@@ -20,20 +22,42 @@ def remove_user():
 
     while confirm != "Y":
         username = input("Enter the name of the user: ")
-        print("Do you want to add the user '" + username + "'? (Y/N)", end="")
+        print("Do you want to remove the user '" + username + "'? (Y/N)", end="")
         confirm = input().upper()
     subprocess.run(["sudo", "userdel", username])
 
+    # 
 
 def add_group():
-    pass
+    print("Wlcome to adding group service!")
+
+    confirm = "N"
+
+    while confirm != "Y":
+        groupname = input("Enter the name of the group: ")
+        print("Do you want to add the group '" + groupname + "'? (Y/N)", end="")
+        confirm = input().upper()
+    subprocess.run(["sudo", "groupadd", groupname])
 
 def remove_group():
-    pass
+    print("Wlcome to deleting group service!")
+
+    confirm = "N"
+
+    while confirm != "Y":
+        groupname = input("Enter the name of the group: ")
+        print("Do you want to delete the group '" + groupname + "'? (Y/N)", end="")
+        confirm = input().upper()
+    subprocess.run(["sudo", "groupdel", groupname])
 
 
 def show_grp_and_users():
-    pass
+    print("Wlcome to listing groups and their users service!")
+
+    
+    groupname = input("Enter the name of the group: ")
+    confirm = input().upper()
+    os.system("sudo cat /etc/group | grep " + groupname)
 
 
 
@@ -76,10 +100,16 @@ def main():
                 break
         elif choice == "3":
             add_group()
+            if ask_for_continuing() == "N":
+                break
         elif choice == "4":
             remove_group()
+            if ask_for_continuing() == "N":
+                break
         elif choice == "5":
             show_grp_and_users()
+            if ask_for_continuing() == "N":
+                break
         else:
             print("Wrong choice! Please select one of the availble commands listed below!")
             continue
@@ -89,3 +119,6 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+# //TODO: refacor functions into different files and import them
